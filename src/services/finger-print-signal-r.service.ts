@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
-import { AppConfig } from '../environment/AppConfig';
+import { environment } from '../environment/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -37,7 +37,6 @@ export class FingerPrintSignalRService {
   // }
 
   public A4Scanner() {
-   // return this.httpClient.get(`${AppConfig.returnApiUrl()}/A4Scanner/scan`);
-    return this.httpClient.get(`https://localhost:7119/api/A4Scanner/scan`);
+    return this.httpClient.get(`${environment.apiUrl}/A4Scanner/scan`);
   }
 }
