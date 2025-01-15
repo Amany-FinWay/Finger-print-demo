@@ -15,6 +15,6 @@ export class AppComponent implements OnInit {
   constructor(private fingerPrintSignalRService: FingerPrintSignalRService) { }
 
   ngOnInit(): void {
-    this.fingerPrintSignalRService.addReceiveFingerprintListener();
+    //this.fingerPrintSignalRService.addReceiveFingerprintListener();
   }
 }
